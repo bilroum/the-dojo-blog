@@ -46,6 +46,7 @@ export default function Navbar() {
           </>
         )}
       </ul>
+      {error && <p className="error">{error}</p>}
     </div>
   );
 }
