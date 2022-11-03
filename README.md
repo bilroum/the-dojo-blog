@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+You can find the avatar-images in https://iconarchive.com/show/. Those are used only for educational purpose.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

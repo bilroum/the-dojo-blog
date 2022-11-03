@@ -31,7 +31,6 @@ export default function Navbar() {
 
         {user && (
           <>
-            <li>Hello{user.displayName}</li>
             <li>
               {!isPending && (
                 <button className="btn" onClick={logout}>

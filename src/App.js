@@ -19,7 +19,7 @@ function App() {
       {!authIsReady && <p>Loading...</p>}
       {authIsReady && (
         <BrowserRouter>
-          <Sidebar />
+          {user && <Sidebar />}
 
           <div className="container">
             <Navbar />
