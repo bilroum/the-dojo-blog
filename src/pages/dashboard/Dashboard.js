@@ -1,8 +1,16 @@
+import { useEffect, useState } from "react";
+import { useCollection } from "../../hooks/useCollection";
 //styles
 import "./Dashboard.css";
 
-import React from "react";
-
 export default function Dashboard() {
-  return <div>Dashboard</div>;
+  const { documents, error } = useCollection("projects");
+
+  return (
+    <div>
+      <h1 className="page-title">Dashboard</h1>
+      {documents && documents.map((doc) => <p key={doc.id}>{doc.name}</p>)}
+      {error && <p className="error">{error}</p>}
+    </div>
+  );
 }

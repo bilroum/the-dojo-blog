@@ -28,6 +28,7 @@ export const useLogin = () => {
       if (!isCancelled) {
         setIsPending(false);
         setError(null);
+        console.log("now is running");
       }
     } catch (err) {
       if (!isCancelled) {
