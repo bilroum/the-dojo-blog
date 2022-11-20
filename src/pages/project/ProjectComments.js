@@ -4,6 +4,7 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 import { useState } from "react";
 import { useFirestore } from "../../hooks/useFirestore";
 import Avatar from "../../components/Avatar";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 export default function ProjectComments({ project }) {
   const { user } = useAuthContext();
@@ -43,7 +44,11 @@ export default function ProjectComments({ project }) {
                 <p>{comment.displayName}</p>
               </div>
               <div className="comment-date">
-                <p>date here</p>
+                <p>
+                  {formatDistanceToNow(comment.createdAt.toDate(), {
+                    addSuffix: true,
+                  })}
+                </p>
               </div>
               <div className="comment-content">
                 <p>{comment.content}</p>
